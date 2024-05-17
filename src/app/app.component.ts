@@ -1,13 +1,20 @@
+import { DemoComponent } from './demo/demo.component';
+
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, DemoComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'demo';
+  title = 'Osama';
+
+  // add(e: any) {
+  //   alert('Hello Osama');
+  //   console.log(e);
+  // }
 }
