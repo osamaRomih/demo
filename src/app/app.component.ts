@@ -13,8 +13,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'Osama';
 
-  // add(e: any) {
-  //   alert('Hello Osama');
-  //   console.log(e);
-  // }
+  add(e: any) {
+    alert('Hello Osama');
+    console.log(e);
+  }
 }

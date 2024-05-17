@@ -8,9 +8,10 @@ import { Component, EventEmitter, Input, Output, output } from '@angular/core';
   styleUrl: './demo.component.scss',
 })
 export class DemoComponent {
-  // @Input('n') name: any;
-  // @Output() myEvent: any = new EventEmitter();
-  // bot() {
-  //   this.myEvent.emit(5);
-  // }
+  @Input('n') name: any;
+  @Output() myEvent: any = new EventEmitter();
+
+  bot() {
+    this.myEvent.emit(5);
+  }
 }
