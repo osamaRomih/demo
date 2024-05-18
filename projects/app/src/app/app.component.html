@@ -1,0 +1,6 @@
+<app-demo [R]="text"></app-demo>
+
+{{text|special:25}}
+
+<input type="text" #ref (keyup.enter)="add(ref.value)">
+<button (click)="add(ref.value)" >add</button> {{show}}
