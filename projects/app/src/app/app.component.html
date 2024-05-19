@@ -1,6 +1,34 @@
-<app-demo [R]="text"></app-demo>
+
+<!-- <app-demo [R]="text"></app-demo> -->
 
 {{text|special:25}}
 
 <input type="text" #ref (keyup.enter)="add(ref.value)">
-<button (click)="add(ref.value)" >add</button> {{show}}
+<button (click)="add(ref.value)" [disabled]="true" >add</button  > {{show}}
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/demo" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLinkActive="active">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLinkActive="active">Pricing</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

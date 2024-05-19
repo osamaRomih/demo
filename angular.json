@@ -26,7 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "./node_modules/bootstrap/scss/bootstrap.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": []
           },
@@ -102,18 +102,14 @@
             "outputPath": "dist/app",
             "index": "projects/app/src/index.html",
             "browser": "projects/app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/app/src/favicon.ico",
               "projects/app/src/assets"
             ],
-            "styles": [
-              "projects/app/src/styles.scss"
-            ],
+            "styles": ["projects/app/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -161,19 +157,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/app/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/app/src/favicon.ico",
               "projects/app/src/assets"
             ],
-            "styles": [
-              "projects/app/src/styles.scss"
-            ],
+            "styles": ["projects/app/src/styles.scss"],
             "scripts": []
           }
         }

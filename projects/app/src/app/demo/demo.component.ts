@@ -1,12 +1,60 @@
+
 import { Component, Input } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-demo',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './demo.component.html',
   styleUrl: './demo.component.scss',
 })
 export class DemoComponent {
-  @Input('R') root: any;
+  text = '';
+
+  data = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  // firstName = new FormControl();
+
+  // gitData() {
+  //   this.firstName.setValue('Angular As Programming');
+  // }
+
+  // myModel = new FormGroup({
+  //   firstName: new FormControl(''),
+  //   lastName: new FormControl(''),
+  //   sunInfo: new FormGroup({
+  //     adress: new FormControl(),
+  //     ZipCode: new FormControl(),
+  //   }),
+  // });
+  constructor(private fb: FormBuilder) {}
+
+  myModel = this.fb.group({
+    firstName: [''],
+    lastName: [''],
+    sunInfo: this.fb.group({
+      adress: [''],
+      ZipCode: [''],
+    }),
+  });
+
+  gitData() {
+    this.myModel.patchValue({
+      firstName: 'Angular',
+      lastName: 'Html',
+      sunInfo: {
+        adress: 'Egypt',
+        ZipCode: '101',
+      },
+    });
+  }
+  git() {
+    console.log(this.myModel.value);
+  }
 }

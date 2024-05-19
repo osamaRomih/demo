@@ -1,3 +1,20 @@
-<p>demo works!</p>
 
-<h4> {{root}} </h4>
+
+
+ <input type="text" [(ngModel)]="text" #Name="ngModel" required="" >
+
+<p> inValid?{{Name.invalid}}</p>
+<p>Valid?{{Name.valid}}</p>
+
+@for(D of data; track $index;let e=$even; let o= $odd){
+  <ul>
+    <li [class.even-cuors]="e" [class.odd-cuors]="o" >{{D}}</li>
+  </ul>
+}
+
+
+@for (D of data; track D; let e = $even; let o = $odd; let i = $index) {
+<ul>
+  <li> {{D}} </li>
+</ul>
+}
