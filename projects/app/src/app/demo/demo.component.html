@@ -18,3 +18,31 @@
   <li> {{D}} </li>
 </ul>
 }
+
+<img [hidden]="true" [src]="imageUrl" [alt]="imageAlt">
+
+<div [ngClass]="'even-cuors'"></div>
+<div [ngClass]="'osama hager'"></div>
+<div [ngClass]="['odd-cuors','even-cuors']"></div>
+<div [ngClass]="{'even-cuors': true, 'odd-cuors':false}"></div>
+
+
+@switch (datObj) {
+  @case (101) {
+    <span> Html  </span>
+  }
+  @case (102) {
+    <span> Css  </span>
+  }
+  @case (103) {
+    <span> Js  </span>
+  }
+  @case (104) {
+    <span> TS  </span>
+  }
+  @default {
+    <span> other  </span>
+
+  }
+
+}

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { SpecialPipe } from './special.pipe';
 import { DemoComponent } from './demo/demo.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,9 @@ import { DemoComponent } from './demo/demo.component';
     SpecialPipe,
     DemoComponent,
     RouterOutlet,
-    RouterModule
-],
+    RouterModule,
+    HttpClientModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

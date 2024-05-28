@@ -1,0 +1,13 @@
+<router-outlet></router-outlet>
+
+<ul>
+  @for(D of data; track $index){
+  <li> {{D.id|json}} </li>
+  <li> {{D.name|json}} </li>
+  }
+  </ul>
+  <div *ngIf="masseg != null">
+    {{masseg}}
+  </div>
+
+
